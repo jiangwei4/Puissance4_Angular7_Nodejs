@@ -1,0 +1,14 @@
+{
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "",
+  "version": "",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "simpledb": "git+https://github.com/lp1dev/simpledb.js.git",
+    "uuid": "^3.3.2",
+    "ws": "^6.1.2"
+  }
+}

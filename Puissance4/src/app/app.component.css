@@ -1,0 +1,18 @@
+@import url("http://www.w3schools.com/lib/w3.css");
+
+img {
+    height: 50px;
+    width:50px;
+    border-radius: 50%;
+}
+th {
+    height: 50px;
+    width:50px;  
+}
+
+
+.logo{
+    height: 100px;
+    width: 200px;
+}
+ 

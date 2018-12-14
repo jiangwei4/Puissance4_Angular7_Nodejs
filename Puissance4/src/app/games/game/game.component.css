@@ -1,0 +1,14 @@
+table td {
+    background-color: blue;
+  margin: auto;
+  }
+
+  th , td, img {
+    height: 42px;
+    width: 42px;
+  }
+  
+.w3-center{
+margin:auto;
+
+}

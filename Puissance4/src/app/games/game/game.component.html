@@ -1,0 +1,23 @@
+<div class="w3-container w3-card-4 w3-light-grey w3-text-blue w3-margin">
+  <h2 class="w3-center" *ngIf="Grille.playe != ''; else autreChoix">Au tour de {{Grille.playe}} de Jouer</h2>
+<ng-template #autreChoix><h2 class="w3-center">Partie Fini</h2></ng-template>
+   
+  <div class="w3-center">
+      <table class="w3-center"><tr><th *ngFor="let pos of positionPossile" >{{pos}}</th></tr>
+        <tr *ngFor="let x of Grille.game" ><td *ngFor="let y of x" ><img *ngIf="y != 2" src={{pion[y]}}></td></tr>
+     <tr> <th *ngFor="let pos of positionPossile" ><button (click)="deplacement(pos)">x</button></th></tr>
+      </table>
+      
+  </div>
+  <br>
+  <br>
+  <div>
+      <div class="w3-container w3-card-4" >
+        <h2 class="w3-text-blue">Messages</h2>
+        <p>      
+        <label class="w3-text-blue"><b>{{reponse}}</b></label>
+        </div>
+
+  </div>
+  <br><br>
+</div>

@@ -1,0 +1,14 @@
+<div>
+    <table><tr><th *ngIf="Avatar != '' && Avatar != null && Avatar != 'undefined'; else autreChoix" ><img [src]=Avatar ></th><ng-template #autreChoix><th></th></ng-template><th><img class="logo" src="https://www.winningmoves.fr/shop/media/resized/430/320/catalog/category/Puissance4.png"></th></tr>
+    <tr><th>{{Name}}</th></tr></table>
+
+<div class="w3-bar w3-black">
+        <button class="w3-bar-item w3-button" (click)="route('/')">Home</button>
+        <button class="w3-bar-item w3-button" (click)="route('/subscribe')">Subscribe</button>
+        <button class="w3-bar-item w3-button" (click)="route('/login')">Login</button>
+        <button class="w3-bar-item w3-button" *ngIf="Avatar != ''" (click)="deconnexion()">deconnexion</button>
+        <button class="w3-bar-item w3-button" *ngIf="Avatar != ''" (click)="route('/games')">Games</button>        
+      </div>
+</div>
+<br>
+<router-outlet></router-outlet>

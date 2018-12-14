@@ -1,0 +1,26 @@
+<div class="w3-container w3-center">
+        <button class="w3-button w3-ripple w3-red w3-round-large w3-center" (click)="load()">rafraichir</button>
+    </div>
+        <div class="w3-container">   
+<ul class="w3-ul w3-card-4">
+        <li class="w3-bar">
+                <img src="https://img.icons8.com/ios/1600/battle.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+                <label class="w3-text-blue"><b>Selectionner un joueur pour lancer une nouvelle partie</b></label>
+                <select class="w3-select" [(ngModel)]="joueurVS" >
+                        <option selected >Vide</option>
+                    <option *ngFor="let joueur of joueurs" >{{joueur}}</option>
+                </select>
+                <div class="w3-bar-item">
+                    <br>
+                    <button class="w3-button w3-white w3-border w3-border-red w3-round-large" (click)="lancerPartie()">Valider</button>
+                </div>
+                </li>
+
+    <li *ngFor="let game of games"  class="w3-bar" (click)="jouer(game.id)">
+    <img src="https://img.icons8.com/ios/1600/battle.png" class="w3-bar-item w3-circle w3-hide-small" style="width:85px">
+    <div class="w3-bar-item">
+        <span class="w3-large">{{game.loginA}} vs {{game.loginB}}</span><br>
+    </div>
+    </li>
+</ul>
+</div>
