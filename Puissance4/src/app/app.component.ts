@@ -15,10 +15,15 @@ export class AppComponent implements OnInit{
   Avatar = 'https://www.cleverfiles.com/howto/wp-content/uploads/2018/03/minion.jpg'
   webSocket: any
   constructor(public http: HttpClient, public router: Router, public gamesService:gamesService){ 
-    this.Avatar = sessionStorage.getItem('avatar')
-    this.Name = sessionStorage.getItem('name')
+    this.loadProfil()
     
   }
+
+  loadProfil(){
+    this.Avatar = sessionStorage.getItem('avatar')
+    this.Name = sessionStorage.getItem('name')
+  }
+
   ngOnInit(){
     this.WebSocket2()
   }
@@ -38,8 +43,8 @@ export class AppComponent implements OnInit{
         .toPromise()
         .then((response:any) => {
             sessionStorage.setItem('token','')
-            location.reload()
             this.router.navigateByUrl('/')
+            this.loadProfil()
         })
         .catch(reject)
       })
